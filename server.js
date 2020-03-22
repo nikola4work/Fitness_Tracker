@@ -10,5 +10,5 @@ var routes = require("./controller/fitness_controller");
 app.use(routes);
 
 app.listen(PORT, () => {
-    console.log(`App is running on port ${PORT}`)
-})
+    console.log(`App is running on port ${PORT}`);
+});
