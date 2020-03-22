@@ -5,9 +5,11 @@ const router = express.Router();
 const db = require("../models");
 
 mongoose.connect(
-    process.env.MONGODB_URI || "mongodb://localhost/Niko_FitnessTracker", {
+    process.env.MONGODB_URI ||
+    "mongodb://NikoFitness:nikola1993@ds241578.mlab.com:41578/heroku_ljkm14fs", {
         useCreateIndex: true,
-        useNewUrlParser: true
+        useNewUrlParser: true,
+        useUnifiedTopology: true
     }
 );
 
