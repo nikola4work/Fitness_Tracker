@@ -17,9 +17,9 @@ function writeExercises(id) {
 
 function writeExerciseForm(buttonTarget) {
     $("#getFit").append(`
-    <h2>Add Exercise to ${$(buttonTarget).text()}</h2>
-    <form action="/add" method="post">
-        <div class="form-group>
+    <h2 style="margin-top:40px;">Add Exercise to ${$(buttonTarget).text()}</h2>
+    <form action="/add" method="post" style="width:400px;">
+        <div class="form-group">
             <label for="exerciseName">Name of Exercise</label>
             <input class="form-control" type="text" name="exerciseName" value="" placeholder="Exercise">
         </div>
@@ -36,14 +36,15 @@ function writeAllWorkouts(response) {
     $("#getFit").html(`<h2>Choose a workout routine</h2>`);
     for (routine of response) {
         $("#getFit").append(`
-            <button class="btn btn-success workoutBtn" value="${routine._id}">${routine.name}</button>
+            <button class="btn btn-primary workoutBtn" value="${routine._id}">${routine.name}</button>
         `);
     }
     $(".workoutBtn").click(event => {
         let workoutID = $(event.currentTarget).val();
         $("#getFit").html(`
-        <h2>Current Routine</h2>
-        <ul id="exerciseList" class="row"></ul>
+        <h2 style="margin-bottom:30px;margin-top:-30px; ">Current Routine</h2>
+        
+        <ol id="exerciseList" class="row"></ol>
         `);
         writeExercises(workoutID);
         writeExerciseForm(event.currentTarget);
