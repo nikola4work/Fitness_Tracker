@@ -4,14 +4,9 @@ const mongoose = require("mongoose");
 const router = express.Router();
 const db = require("../models");
 
-mongoose.connect(
-    process.env.MONGODB_URI ||
-    "mongodb://NikoFitness:nikola1993@ds241578.mlab.com:41578/heroku_ljkm14fs", {
-        useCreateIndex: true,
-        useNewUrlParser: true,
-        useUnifiedTopology: true
-    }
-);
+var mongoose = require(‘mongoose’);
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/fitness-2020');
+
 
 router.get("/", (req, res) => {
     res.status(200).sendFile("index.html");
