@@ -1,0 +1,26 @@
+{
+  "name": "fitness_tracker",
+  "version": "1.0.0",
+  "description": "Fitness_tracker HW",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nikola4work/Fitness_Tracker.git"
+  },
+  "keywords": [
+    "HW"
+  ],
+  "author": "Niko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nikola4work/Fitness_Tracker/issues"
+  },
+  "homepage": "https://github.com/nikola4work/Fitness_Tracker#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
