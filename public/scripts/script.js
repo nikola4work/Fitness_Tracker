@@ -101,7 +101,7 @@ $("#newWorkout").click(() => {
     <form action="/submit" method="post">
         <div class="form-group">
             <label for="workoutName">Name of Workout Routine</label>
-            <input class="form-control" type="text" name="workoutName" value="" placeholder="Workout Title">
+            <input class="form-control" type="text" name="workoutName" value="" placeholder="Workout Title" style="width:400px;">
         </div>
         <button class="btn btn-primary" id="createWorkout">Submit</button>
     </form>
