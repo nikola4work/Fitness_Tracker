@@ -1,14 +1,10 @@
 const express = require("express");
-const mongoose = require("mongoose");
+
 
 const router = express.Router();
 const db = require("../models");
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/Niko_Fitness', {
-    useCreateIndex: true,
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-});
+
 
 router.get("/", (req, res) => {
     res.status(200).sendFile("index.html");
