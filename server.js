@@ -11,7 +11,7 @@ var routes = require("./controller/fitness_controller");
 app.use(routes);
 
 
-var URI = process.env.MONGODB_URI || "mongodb://localhost/Niko_Fitness";
+var URI = process.env.MONGODB_URI || "mongodb://user:nikola2020@ds151997.mlab.com:51997/heroku_rwh6btjv";
 
 mongoose.connect(URI, {
     useCreateIndex: true,
